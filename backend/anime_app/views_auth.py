@@ -47,7 +47,6 @@ def handle_youtube_call(request):
 
     api_key =  os.environ.get("youtube_key")
     try:
-        
         if request.method == "POST":
             data = json.loads(request.body)
             anime_title = data.get("title")
