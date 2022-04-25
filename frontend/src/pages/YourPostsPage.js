@@ -39,7 +39,6 @@ function YourPostsPage () {
       </div>}
     </div>
   )
-
 }
 
 export default YourPostsPage

@@ -1,10 +1,16 @@
 import {Navbar, Container, Row, Nav, NavDropdown, Button} from "react-bootstrap"
-import "../styles/app-nav.css"
 import Cookies from "js-cookie";
 import apiBackend from "../API/apiBackend";
 
 
 function AppNav(props) { 
+
+  const categories = [{name : "Action" , mal_id : "1"}, 
+  {name : "Adventure" , mal_id : "2"}, {name : "Comedy" , mal_id : "4"}, 
+  {name : "Drama" , mal_id : "8"}, {name : "Fantasy" , mal_id : "10"}, 
+  {name : "Horror" , mal_id : "14"}, {name : "Romance" , mal_id : "22"}, 
+  {name : "Sci-Fi" , mal_id : "24"}, {name : "Slice of Life" , mal_id : "36"}, 
+  {name : "Sports" , mal_id : "30"}]
 
   const doLogout = async () => {
     const response = await apiBackend.logout()
@@ -21,14 +27,19 @@ function AppNav(props) {
           <Row>
             <Nav>
               <Navbar.Brand href="/"><h4>Home</h4></Navbar.Brand>
+              <NavDropdown title="Categories" id="navbarScrollingDropdown">
+                {categories.map( category => (
+                  <Nav.Link href ={`#/category/${category.mal_id}/${category.name}`}>{`${category.name}`}</Nav.Link>
+                ))}
+              </NavDropdown>
               {
                 props.username
                 ?
                 <NavDropdown title="Posts" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#/all-posts">All Posts</NavDropdown.Item>
-                <NavDropdown.Item href="#/your-posts">Your Posts</NavDropdown.Item>
-              </NavDropdown>
-              :
+                  <NavDropdown.Item href="#/all-posts">All Posts</NavDropdown.Item>
+                  <NavDropdown.Item href="#/your-posts">Your Posts</NavDropdown.Item>
+                </NavDropdown>
+                :
                 <Nav.Link href="#/all-posts">All Posts</Nav.Link>
               }
               {props.username && <Nav.Link  href="#/profile">Profile</Nav.Link>}

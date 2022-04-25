@@ -1,14 +1,13 @@
 import CurrentAnime from "../components/CurrentAnime"
 import TopAnime from "../components/TopAnime"
 import SearchBar from "../components/SearchBar"
-import light from "../images/light.png"
+import HomeGraphic from "../components/HomeGraphic";
+
 function HomePage(){
 
   return (
     <div>
-      <div className=" d-flex justify-content-center">
-        <img id="home-wallpaper" src={light}></img>
-      </div> 
+      <HomeGraphic/>
       <SearchBar/>
       <CurrentAnime/> 
       <hr></hr>
@@ -19,6 +18,7 @@ function HomePage(){
       </div> 
     </div>
   )
+
 }
 
 export default HomePage

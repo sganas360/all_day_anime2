@@ -2,7 +2,6 @@ import { Form, FormControl, Button, Container, Row } from "react-bootstrap"
 import { useState, useEffect, useCallback } from "react"
 import apiThirdParty from "../API/apiThirdParty"
 import AnimeList from "./AnimeList"
-import "../styles/search-bar.css"
 
 function SearchBar() {
   const [animeTitle, setAnimeTitle] = useState("")

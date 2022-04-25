@@ -2,7 +2,6 @@ import Cookie from "js-cookie"
 
 const apiHelpers = { }
 
-
 // added for authentication
 apiHelpers.getCsrfConfig = () => {
   return { 
@@ -25,8 +24,5 @@ apiHelpers.tryCatchFetch = async (axiosCall) => {
     return null
   }
 }
-
-
-
 
 export default apiHelpers 

@@ -25,21 +25,12 @@ const loadData = async () => {
     setWatchlist(watchlistData)
     let recommendations = []
     let randomNum = Math.floor(Math.random() * watchlistData.length)
-    let randomNumTwo = Math.floor(Math.random() * watchlistData.length)
     const recommendationsData = await apiThirdParty.getRecommendationsByAnimeID(watchlistData[randomNum].mal_id)
-    const recommendationsDataTwo = await apiThirdParty.getRecommendationsByAnimeID(watchlistData[randomNumTwo].mal_id)
     if(recommendationsData){
-      for(let i = 0; i < 3; i++){
+      for(let i = 0; i < 6; i++){
         if(recommendationsData.data[i]){
           recommendations.push(recommendationsData.data[i])
         }
-        
-      }
-    }
-    if(recommendationsDataTwo){
-      for(let i = 3; i < 6; i++){
-        if(recommendationsDataTwo.data[i])
-        recommendations.push(recommendationsDataTwo.data[i])
       }
     }
     setRecommendations(recommendations)

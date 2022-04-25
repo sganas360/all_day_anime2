@@ -23,4 +23,3 @@ function AnimeList(props){
 }
 
 export default AnimeList
-

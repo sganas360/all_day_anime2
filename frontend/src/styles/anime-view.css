@@ -67,7 +67,6 @@ img {
   transition: transform 0.25s;
 }
 
-
 .image-overlay:hover{
   opacity: 1;
 
@@ -109,6 +108,7 @@ img {
   padding-top: 25px;
   height: 0;
 }
+
 .wrapper iframe {
   position: absolute;
   top: 0;

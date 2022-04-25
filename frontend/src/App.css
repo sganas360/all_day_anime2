@@ -26,5 +26,19 @@
 #profile{
   border-radius: 50%;
   width:  16rem;
-  height: 12.5rem;
+  height: 14rem;
+}
+
+.bar {
+  background-color: #ffffff;
+}
+
+.btn-primary {
+  background-color: #4717f7;
+  border-color: #4717f7;
+ 
+}
+
+.navbar-inner {
+  background:transparent;
 }

@@ -26,7 +26,6 @@ class PostsViewSet(ModelViewSet):
                 return Posts.objects.all()
             posts = Posts.objects.filter(author=self.request.user).order_by("anime_title")
             serializer = PostsSerializer(posts, many=True)
-            print(serializer)
             return Response(serializer.data)
         return JsonResponse({ "Message": "User is not logged in, so no posts!" }, status=200)
         

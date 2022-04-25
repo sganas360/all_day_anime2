@@ -17,7 +17,6 @@ function PostList (props){
       }
     </Col>
   )
-
 }
 
 export default PostList

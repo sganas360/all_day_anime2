@@ -17,9 +17,11 @@ import PostsPage from './pages/PostsPage';
 import ProfilePage from './pages/ProfilePage';
 import YourPostsPage from './pages/YourPostsPage';
 import AboutMePage from './pages/AboutMePage';
+import CategoryPage from './pages/CategoryPage';
 
 //Components
 import AppNav from './components/Header.js';
+
 
 function App() {
   //states
@@ -41,6 +43,7 @@ function App() {
           <Route exact path = "/all-posts/:postID" element = { <PostsPage username = {username}/> }/>
           <Route exact path = "/profile" element = { <ProfilePage/> }/>
           <Route exact path = "/your-posts" element = { <YourPostsPage/> }/>
+          <Route exact path = "/category/:categoryID/:categoryName" element = { <CategoryPage /> }/>
           <Route exact path = "/about-me" element = { <AboutMePage /> }/>
         </Routes>
       </HashRouter>

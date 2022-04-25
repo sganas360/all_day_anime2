@@ -4,7 +4,7 @@ import tanjiro from '../images/tanjiro.webp'
 import goku from '../images/goku.webp'
 import luffy from "../images/luffy.webp"
 import gon from "../images/gon.png"
-
+import Atropos from 'atropos/react';
 
 function GuessCharacterPage(){
 
@@ -14,15 +14,17 @@ function GuessCharacterPage(){
 
     for(let i = 0; i < images.length; i++){
       elements.push(
-      <Row className="my-2" key={images[i].title}>
-        <div className="col image game">
-          <img className="my-2" src={images[i].url}></img>
+      <Row className="my-2" key={images[i].title}> 
+        <Atropos className="my-atropos">
+          <div className="col image game">
+            <img className="my-2" src={images[i].url}></img>
           <div className="image-overlay">
             <div className="game-title">
               <a className = "game-links" href = {`/#/guess-character/${images[i].id}`}>{images[i].title}</a>
             </div>
           </div>
-        </div>
+          </div> 
+        </Atropos>
       </Row>
       )
     }
@@ -39,7 +41,6 @@ function GuessCharacterPage(){
      </Container>
     </div>
   )
-
 }
 
 export default GuessCharacterPage
