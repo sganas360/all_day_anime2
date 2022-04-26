@@ -15,7 +15,6 @@ function AnimeDetailPage(props){
 
   const fetchData = async () => {
     const response = await apiThirdParty.getAnimeByID(animeID)
-    console.log("anime--------",response.data)
     if(response.data){
       setAnime(response.data)
       setAnimeImage(response.data.images.jpg.image_url)
@@ -45,7 +44,7 @@ function AnimeDetailPage(props){
       <AnimeDetail anime = {anime} animeImage = {animeImage} youtubeId = {youtubeId} watchlist ={watchlist} loadWatchlist = {loadWatchlist} username ={props.username}/>
       :
       <div className=" d-flex justify-content-center">
-      <Spinner animation="border" role="status">
+      <Spinner className = "text" animation="border" role="status">
           <span className="visually-hidden"></span>
       </Spinner>
       </div>

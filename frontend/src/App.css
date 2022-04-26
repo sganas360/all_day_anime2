@@ -24,9 +24,9 @@
 }
 
 #profile{
-  border-radius: 50%;
-  width:  16rem;
-  height: 14rem;
+  border-radius: 5%;
+  max-width:100%; 
+  height:auto
 }
 
 .bar {
