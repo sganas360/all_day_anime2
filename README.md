@@ -1,6 +1,13 @@
 # All Day Anime
 By: Shun Ganas
 
+### Table of Contents
+- [Overview](#overview)
+- [Screen Grab](#screen-grab)
+- [Live Link](#live-link)
+- [Technology](#technology)
+- [Inquiries](#inquiries)
+
 ### Overview
 I am a huge anime fan, so I wanted to build a platform for people who enjoy anime to come together and discuss relevant topics regarding anime. This served as the motivation to create All Day Anime. In this web application, users have the ability to make posts about anime, and people can respond and discuss on the platform. Users can also see which anime are highly rated and currently airing at the moment. Furthermore, users have the ability to add anime to their watchlist, so they can track what they are currently watching. A user's watchlist also serves as the basis for anime recommendations to that user. Additionally, I added a "Guess the Character" game which is a fun way for users to test their anime knowledge by identifying an anime character based on a photo. I hope you all enjoy using my web application, and thank you for supporting my dream.
 ### Screen Grab
